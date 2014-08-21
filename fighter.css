@@ -1,0 +1,76 @@
+﻿body {
+  background: black
+}
+
+canvas {
+  border: 1px solid #7B899B;
+}
+
+a {
+text-decoration: none;
+}
+
+.canvasContainer {
+  width: 560px; 
+  background: black;
+  margin: auto;
+}
+
+.battle-console {
+  width: 550px;
+  height: 36px;
+  background: #575757;
+}
+
+.controls {
+  float: right;
+  
+}
+
+.restartButton {
+  float: left;
+    vertical-align: middle;
+}
+
+.status {
+  float: left;
+  width: 300px;
+  height: 32px;
+  background: black;
+  border: 2px solid #575757;
+  margin-left: 75px;
+  text-align: center;
+}
+.status  div {
+  float: left;
+  color: yellow;
+  font-size: 28px;
+  height: 32px;
+}
+#statusText {
+  width: 180px;
+}
+
+#scoreText {
+  width: 45px;
+  border-left: 2px solid #575757;
+}
+
+.levelDiv {
+  width: 65px;
+  border-right: 2px solid #575757;
+}
+
+.levelControl {
+  width: 16px;
+  padding: 1px;
+}
+
+.levelControl img{
+  display: block;
+  margin-top: 2px;
+}
+
+#levelText  {
+  width: 40px;
+}

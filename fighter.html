@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fighter - HTML5 Canvas</title>
+  <link rel="stylesheet" href="fighter.css">
+  <script src="fighter.js"></script>
+  <script src="sprites.js"></script>
+  <script src="levels.js"></script>
+</head>
+
+<body>
+  <audio id='music' autoplay loop>
+    <source src='audio/bgmusic.mp3' type='audio/mpeg'>
+  </audio>
+  <div class="canvasContainer">
+    <canvas id="mainCanvas" width="550" height="550">
+    </canvas>
+    <div class='battle-console'>
+    <a href='#' onclick='Fighter.restart();' class='restartButton'>
+      <img src='images/controls/restart.png' width='36' height='36' alt='Restart Button' title='Restart Game'/>
+    </a>
+      <div class='status' id='status'>
+        <div class='levelDiv'>
+          <div class='levelControl'>
+            <a href='#' onclick='Fighter.upLevel();'>
+              <img src='images/controls/up.png' alt='Up' height='12' width='16'/>
+            </a>
+            <a href='#' onclick='Fighter.downLevel();'>
+              <img src='images/controls/down.png' alt='Up' height='12' width='16'/>
+            </a>
+          </div>
+          <div id='levelText'></div>
+        </div>
+        <div id='statusText'></div>
+        <div id='scoreText'></div>
+      </div>
+      <div class='controls'>
+         <a href='#' onclick='Fighter.resume();' id='resume' style='display: none'>
+          <img src='images/controls/play.png' width='36' height='36' alt='Resume Button' title='Resume'/>
+        </a>
+         <a href='#' onclick='Fighter.pause();' id='pause'>
+          <img src='images/controls/pause.png' width='36' height='36' alt='Pause Button' title='Pause'/>
+        </a>
+         <a href='#' onclick='Fighter.volumeOn();' id='volOn' style='display: none'>
+          <img src='images/controls/volumeOn.png' width='36' height='36' alt='Volume On Button' title='Volume On'/>
+        </a>
+         <a href='#' onclick='Fighter.volumeOff();' id='volOff'>
+          <img src='images/controls/volumeOff.png' width='36' height='36' alt='Volume Off Button' title='Volume Off'/>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
