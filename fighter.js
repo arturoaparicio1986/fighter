@@ -93,6 +93,9 @@ my.loadImagesAndStartGame = function() {
 
 // Listeners - Process player input
 function processDown(e) {
+  // Don't let the screen move around
+  if([SPACE_KEY, LEFT_KEY, UP_KEY, RIGHT_KEY, DOWN_KEY].indexOf(e.keyCode) > -1)
+      e.preventDefault();
   if (my.state == my.gameState.START_SCREEN)
     if (e.keyCode == SPACE_KEY)
       my.state = my.gameState.ACTIVE;
@@ -114,7 +117,6 @@ function processDown(e) {
         my.player.dx = 3;
       else if (e.keyCode == DOWN_KEY)
       my.player.dy = 3;
-      e.preventDefault(); // Don't let the screen move around
     }
   }
 }
